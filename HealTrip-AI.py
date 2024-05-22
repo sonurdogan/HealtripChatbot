@@ -52,9 +52,9 @@ if st.sidebar.button("Get the latest version! :rocket:"):
             "content": "Welcome to HealTrip AI - your personal Healtrip Assistant! 👋"
         }
     ]
-    st.write("Getting the latest version of the database... ⏳")
+    st.write("Getting the latest version... ⏳")
     created_db = create_vector_store("dhh_db")
-    st.write("The latest version of the database has been created successfully! 🎉")
+    st.write("The latest version has been created successfully! 🎉")
     st.session_state.messages = []
     st.session_state.messages = [
         {
