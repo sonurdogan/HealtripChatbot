@@ -20,18 +20,20 @@ def update_vector_db():
     hospital_names = ""
     for hospital in hospitals:
         hospital_names = hospital_names + ", " + hospital["hospitalName"]
+    hospitals_small_desc = [hospital for hospital in hospitals_small_desc if hospital is not None]
     hospitals_small_desc_st = "".join(hospitals_small_desc)
     for i, hosp in enumerate(hospitals_long_desc):
         import re
         hospitals_long_desc[i] = re.sub(r'\s+', ' ', hospitals_long_desc[i])
 
-
+    hospitals_long_desc_st = [hospital for hospital in hospitals_long_desc if hospital is not None]
     hospitals_long_desc_st = "\n\n    ".join(hospitals_long_desc)
 
     doctor_small_desc = ""
     for doctor in doctors:
         s = doctor["doctorName"] + " with specialty in " + doctor["department"]["departmentName"] + ", "
         doctor_small_desc = doctor_small_desc + s
+    doctor_description = [doctor for doctor in doctor_description if doctor is not None]
     doctor_description_st = "".join(doctor_description)
 
     hotels_desc = ""
