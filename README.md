@@ -14,3 +14,6 @@ Chatbot can be found on Healtrip's [page](https://healtrip-frontend.azurewebsite
 ```sh
 pip install -r requirements.txt
 ```
+
+
+![healtripchatbot](https://github.com/sonurdogan/HealtripChatbot/assets/72014272/45ec1691-fbf9-44df-9420-40cfa33f06b0)
